@@ -1,23 +1,4 @@
-## Reference
 
-1. SilverStripe 5 with Docker Compose \
-https://www.youtube.com/watch?v=uLD9nTebXLI
-
-2. SilverStripe Lessons \
-https://www.youtube.com/playlist?list=PLmp1xeBoQYsX_hyvJUufM-Jwr-Kc14lgN
-
-
-## Setup
-
-1. Setup Silverstripe through Composer (and ignore platform requirements)
-
-```console
-composer create-project silverstripe/installer ss-example --ignore-platform-reqs
-```
-
-2. Add Docker compose file to the project root folder
-eg.
-```yml
 services:
   cms:
     image: brettt89/silverstripe-web
@@ -61,27 +42,3 @@ services:
 volumes:
   ss-eg-vendor:
   ss-eg-dbdata:
-```
-
-3. Update composer.json to specify php version (at config.platform)
-
-eg.
-```json
-    "config": {
-        "process-timeout": 600,
-        "allow-plugins": {
-            "composer/installers": true,
-            "silverstripe/recipe-plugin": true,
-            "silverstripe/vendor-plugin": true
-        },
-        "platform": {
-            "php": "8.3.9",
-            "ext-intl": "8.3.9"
-        }
-    },
-```
-
-4. In terminal, type `docker compose up -d` to build and run the containers
-
-5. After composer inside the docker container finished running, visit the running site at `http://localhost:9000`
-
