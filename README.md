@@ -85,3 +85,16 @@ eg.
 
 5. After composer inside the docker container finished running, visit the running site at `http://localhost:9000`
 
+
+## Lessons:
+
+1. Theme: Create 'one-ring' theme
+  - Create a new folder named `one-ring` inside `themes` directory and add the corresponding subfolders
+  - Add a new Silverstripe template file named `Page.ss` inside `themes\one-ring\templates`.
+  - Update `app/_config/theme.yml` to replace `simple` with `one-ring`
+  - Add `?flush=1` to the URL to flush the cache and load the new theme. \
+  eg.
+  ```
+     http://localhost:9000/?flush=1
+  ```
+  
