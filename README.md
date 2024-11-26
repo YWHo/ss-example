@@ -97,4 +97,8 @@ eg.
   ```
      http://localhost:9000/?flush=1
   ```
-  
+
+2. Public: Add static folder
+  - Create a new folder named 'static' inside `public`. Then, add the corresponding files and folders
+  - Visit `http://localhost:9000/static/default.html` and `http://localhost:9000/static/home.html`
+
