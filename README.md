@@ -36,9 +36,9 @@ services:
       - SS_DATABASE_SERVER=database
       - SS_DATABASE_NAME=SS_example_db
       - SS_DATABASE_USERNAME=root
-      - SS_DATABASE_PASSWORD="example6#-912"
+      - SS_DATABASE_PASSWORD=example6_912
       - SS_DEFAULT_ADMIN_USERNAME=admin
-      - SS_DEFAULT_ADMIN_PASSWORD="c3-56jmp.456p#943"
+      - SS_DEFAULT_ADMIN_PASSWORD=c3_56jmp_456p_x943
 
   composer:
     image: composer
@@ -53,7 +53,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD="example6#-912"
+      - MYSQL_ROOT_PASSWORD=example6_912
       - MYSQL_DATABASE=SS_example_db
     volumes:
       - ss-eg-dbdata:/var/lib/mysql
